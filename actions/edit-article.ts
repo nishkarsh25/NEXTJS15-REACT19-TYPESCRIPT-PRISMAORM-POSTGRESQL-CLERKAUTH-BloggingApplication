@@ -150,5 +150,5 @@ export const editArticle = async (
   }
 
   revalidatePath("/dashboard");
-  
+  redirect("/dashboard");
 };
