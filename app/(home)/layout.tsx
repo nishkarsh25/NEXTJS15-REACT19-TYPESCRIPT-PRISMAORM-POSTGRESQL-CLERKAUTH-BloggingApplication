@@ -4,7 +4,7 @@ import React from "react";
 
 const layout = async ({ children }: { children: React.ReactNode }) => {
   const user = await currentUser();
-  console.log(user);
+ 
   
   if (!user) return <div>Loading...</div>;
 

@@ -68,7 +68,6 @@ export const createArticle = async (
     };
   }
   //start creating articles
-  console.log(formData);
   const imageFile = formData.get("featuredImage") as File | null;
   if (!imageFile || imageFile.name === "undefined") {
     return {
