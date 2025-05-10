@@ -64,4 +64,4 @@ const HeroSection = (props: Props) => {
   );
 };
 
-
+export default HeroSection;
