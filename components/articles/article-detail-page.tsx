@@ -25,7 +25,18 @@ type ArticleDetailPageProps = {
 const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
   article,
 }) => {
-  
+  const comments = await prisma.comment.findMany({
+    where: { articleId: article.id },
+    include: {
+      author: {
+        select: {
+          name: true,
+          email: true,
+          imageUrl: true,
+        },
+      },
+    },
+  });
 
   
 
