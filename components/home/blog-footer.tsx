@@ -112,7 +112,25 @@ const BlogFooter = () => {
             </ul>
           </div>
 
-          
+          {/* Newsletter */}
+          <div className="space-y-4 md:col-span-2 lg:col-span-2">
+            <h3 className="text-lg font-semibold text-foreground">
+              Stay Updated
+            </h3>
+            <form className="flex flex-col gap-4">
+              <div className="relative">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="pl-10 pr-4 py-6"
+                />
+                <Mail className="h-5 w-5 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2" />
+              </div>
+              <Button type="submit" className="w-full">
+                Subscribe
+              </Button>
+            </form>
+          </div>
         </div>
 
         
