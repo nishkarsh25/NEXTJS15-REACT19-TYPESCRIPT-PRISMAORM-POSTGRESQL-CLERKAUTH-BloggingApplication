@@ -44,7 +44,7 @@ const RecentArticles: React.FC<RecenetArticlesProps> = ({ articles }) => {
       </CardHeader>
 
       {!articles.length ? (
-        
+        <CardContent>No Articles found</CardContent>
       ) : (
         
       )}
