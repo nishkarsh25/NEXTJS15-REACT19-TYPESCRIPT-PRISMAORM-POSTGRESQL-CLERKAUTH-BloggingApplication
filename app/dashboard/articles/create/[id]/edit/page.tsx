@@ -20,4 +20,4 @@ const page: React.FC<EditArticleParams> = async ({ params }) => {
   );
 };
 
-
+export default page;
