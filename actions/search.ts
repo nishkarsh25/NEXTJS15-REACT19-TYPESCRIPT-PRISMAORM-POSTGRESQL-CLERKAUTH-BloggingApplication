@@ -7,5 +7,6 @@ export const searchAction = async (formData: FormData) => {
   if (typeof searchText !== "string" || !searchText) {
     redirect("/");
   }
+
   redirect(`/article?search=${searchText}`);
 };
