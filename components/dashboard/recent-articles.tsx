@@ -31,6 +31,9 @@ type RecenetArticlesProps = {
   }>[];
 };
 
+const RecentArticles: React.FC<RecenetArticlesProps> = ({ articles }) => {
+  
+};
 
 
 
