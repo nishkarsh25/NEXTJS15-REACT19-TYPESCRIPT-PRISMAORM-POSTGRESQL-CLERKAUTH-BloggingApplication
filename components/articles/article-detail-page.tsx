@@ -1,0 +1,15 @@
+import { Prisma } from "@prisma/client";
+import React from "react";
+import { Avatar, AvatarImage } from "../ui/avatar";
+import { AvatarFallback } from "@radix-ui/react-avatar";
+import LikeButton from "./like-button";
+import CommentList from "../comments/comment-list";
+import CommentInput from "../comments/comment-input";
+import { prisma } from "@/lib/prisma";
+import { auth } from "@clerk/nextjs/server";
+
+
+
+
+
+
