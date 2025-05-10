@@ -23,7 +23,16 @@ const CreateArticlesPage = (props: Props) => {
     errors: {},
   });
 
-  
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    formData.append("content", content);
+
+    startTransition(() => {
+      action(formData);
+    });
+  };
 
   
 };
