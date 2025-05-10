@@ -8,5 +8,6 @@ export const deleteArticle = async (articleId: string) => {
     where: { id: articleId }
   });
 
+
   revalidatePath("/dashboard");
 };
