@@ -53,7 +53,13 @@ export const createComment = async (
   }
 
   try {
-    
+    await prisma.comment.create({
+      data: {
+        body: result.data.body,
+        authorId: existingUser.id,
+        articleId,
+      },
+    });
   } catch (error: unknown) {
     
   }
