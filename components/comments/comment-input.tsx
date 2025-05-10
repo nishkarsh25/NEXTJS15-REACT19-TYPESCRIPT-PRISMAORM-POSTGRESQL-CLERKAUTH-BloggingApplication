@@ -23,7 +23,13 @@ const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
           <AvatarImage src="" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        
+        <div className="flex-1">
+          <Input type="text" name="body" placeholder="Add a comment...." />
+          {formState.errors.body && (
+            <p className="text-red-600 text-sm">{formState.errors.body}</p>
+          )}
+          
+        </div>
       </div>
     </form>
   );
