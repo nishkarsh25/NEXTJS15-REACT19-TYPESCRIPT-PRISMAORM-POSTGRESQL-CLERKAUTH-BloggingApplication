@@ -86,7 +86,7 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
 
             <div className="space-y-2">
               <Label htmlFor="featuredImage">Featured Image</Label>
-              <Input type="file" id="featuredImage" accept="image/*" />
+              <Input type="file" name="featuredImage" id="featuredImage" accept="image/*" />
               <div className="mb-4 ">
                 {article.featuredImage && (
                   <img
