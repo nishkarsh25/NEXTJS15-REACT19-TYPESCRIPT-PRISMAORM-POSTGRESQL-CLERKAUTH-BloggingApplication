@@ -11,3 +11,4 @@ const DashBoard = (props: Props) => {
   )
 }
 
+export default DashBoard
