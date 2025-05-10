@@ -29,8 +29,18 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
   const [formState, action, isPending] = useActionState(editArticle.bind(null,article.id), {
     errors: {},
   });
-
   
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    formData.append("content", content);
+
+    startTransition(() => {
+      action(formData);
+    });
+  };
 
  
 };
