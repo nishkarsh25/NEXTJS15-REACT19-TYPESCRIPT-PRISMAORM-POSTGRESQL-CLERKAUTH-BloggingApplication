@@ -8,5 +8,5 @@ export const searchAction = async (formData: FormData) => {
     redirect("/");
   }
 
-  
+  redirect(`/article?search=${searchText}`);
 };
