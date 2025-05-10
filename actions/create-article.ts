@@ -133,5 +133,6 @@ export const createArticle = async (
     }
   }
 
-  
+  revalidatePath("/dashboard");
+  redirect("/dashboard");
 };
