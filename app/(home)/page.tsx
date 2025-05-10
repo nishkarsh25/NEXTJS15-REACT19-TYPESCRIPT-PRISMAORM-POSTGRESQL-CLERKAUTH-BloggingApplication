@@ -36,7 +36,7 @@ const Home = (props: Props) => {
         </div>
       </section>
 
-      
+      <BlogFooter />
     </div>
   );
 };
