@@ -40,9 +40,17 @@ export const createComment = async (
     };
   }
 
-  
+  const existingUser = await prisma.user.findUnique({
+    where: { clerkUserId: userId },
+  });
 
-  
+  if (!existingUser) {
+    return {
+      errors: {
+        formErrors: ["User not found. Please register before adding comment"],
+      },
+    };
+  }
 
   
 
