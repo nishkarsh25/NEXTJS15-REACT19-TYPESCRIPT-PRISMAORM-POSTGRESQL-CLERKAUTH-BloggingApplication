@@ -20,7 +20,14 @@ const CommentList: React.FC<CommentListProps> = ({ comments }) => {
   return (
     <div className="space-y-8 ">
       {comments.map((comment) => (
-        
+        <div key={comment.id} className="flex gap-4 ">
+          <Avatar className="h-10 w-10">
+            <AvatarImage src={comment.author.imageUrl || ""} />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+
+          
+        </div>
       ))}
     </div>
   );
