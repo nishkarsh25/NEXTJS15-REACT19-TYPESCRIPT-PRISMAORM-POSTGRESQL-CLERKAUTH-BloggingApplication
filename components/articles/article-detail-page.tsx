@@ -22,6 +22,18 @@ type ArticleDetailPageProps = {
   }>;
 };
 
+const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
+  article,
+}) => {
+  
 
+  
+
+  
+
+  
+
+  
+};
 
 
