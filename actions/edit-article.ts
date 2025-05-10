@@ -67,9 +67,19 @@ export const editArticle = async (
     };
   }
 
-  
+  const existingUser = await prisma.user.findUnique({
+    where: { clerkUserId: userId },
+  });
 
-  
+  if (!existingUser || existingArticle.authorId !== existingUser.id) {
+    return {
+      errors: {
+        formErrors: [
+          "User not found. Please register befor creating an article",
+        ],
+      },
+    };
+  }
   
 
  
