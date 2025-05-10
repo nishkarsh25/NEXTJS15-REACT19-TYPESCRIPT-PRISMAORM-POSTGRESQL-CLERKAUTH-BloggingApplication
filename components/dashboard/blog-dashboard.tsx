@@ -9,7 +9,24 @@ import { prisma } from "@/lib/prisma";
 type Props = {};
 
 const BlogDashBoard = async (props: Props) => {
-  
+  const [articles, totalComments] = await Promise.all([
+    prisma.articles.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+      include: {
+        comments: true,
+        author: {
+          select: {
+            name: true,
+            email: true,
+            imageUrl: true,
+          },
+        },
+      },
+    }),
+    prisma.comment.count(),
+  ]);
   
 };
 
