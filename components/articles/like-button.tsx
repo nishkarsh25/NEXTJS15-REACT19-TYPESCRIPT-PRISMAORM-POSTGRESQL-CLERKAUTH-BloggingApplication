@@ -11,6 +11,17 @@ type LikeButtonProps = {
   isLiked: Boolean;
 };
 
+const LikeButton: React.FC<LikeButtonProps> = ({
+  articleId,
+  likes,
+  isLiked,
+}) => {
+  const [optimisticLike, setOptimisticLike] = useOptimistic(likes.length);
+  const [isPending, startTransition] = useTransition();
 
+  
+
+  
+};
 
 
