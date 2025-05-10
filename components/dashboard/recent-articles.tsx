@@ -46,7 +46,47 @@ const RecentArticles: React.FC<RecenetArticlesProps> = ({ articles }) => {
       {!articles.length ? (
         <CardContent>No Articles found</CardContent>
       ) : (
-        
+        <CardContent>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Title</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead>Comments</TableHead>
+                <TableHead>Date</TableHead>
+                <TableHead>Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+
+            <TableBody>
+              {articles.map((article) => (
+                <TableRow key={article.id}>
+                  <TableCell>{article.title}</TableCell>
+                  <TableCell>
+                    <Badge
+                      variant={"outline"}
+                      className="rounded-full bg-green-100 text-green-800"
+                    >
+                      Published
+                    </Badge>
+                  </TableCell>
+                  <TableCell>{article.comments.length}</TableCell>
+                  <TableCell>{article.createdAt.toDateString()}</TableCell>
+                  <TableCell>
+                    <div className="flex  gap-2 ">
+                      <Link href={`/dashboard/articles/${article.id}/edit`}>
+                        <Button variant="ghost" size={"sm"}>
+                          Edit
+                        </Button>
+                      </Link>
+                      <DeleteButton articleId={article.id} />
+                    </div>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </CardContent>
       )}
     </Card>
   );
