@@ -26,7 +26,17 @@ const LikeButton: React.FC<LikeButtonProps> = ({
     });
   };
 
-  
+  return (
+    <div className="flex gap-4 mb-12 border-t pt-8">
+      <form action={handleLikeDislike}>
+        
+      </form>
+
+      
+
+      
+    </div>
+  );
 };
 
 
