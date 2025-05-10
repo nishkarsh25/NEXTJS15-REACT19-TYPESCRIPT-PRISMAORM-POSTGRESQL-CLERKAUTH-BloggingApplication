@@ -25,7 +25,23 @@ import { useState } from "react";
 
 const LeftSidebar = () => {
   const [isOpen, setIsOpen ] = useState(false);
-  
+  return (
+    <div>
+      <Sheet open ={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger asChild>
+          <Button variant={"outline"} className="md:hidden m-4 ">
+            <LayoutDashboard className="h-5 w-5" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side={'left'} className="w-[250px]">
+          <DashboardSidebar />
+        </SheetContent>
+      </Sheet>
+
+
+      
+    </div>
+  );
 };
 
 
