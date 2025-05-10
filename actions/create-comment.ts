@@ -61,7 +61,19 @@ export const createComment = async (
       },
     });
   } catch (error: unknown) {
-    
+    if (error instanceof Error) {
+      return {
+        errors: {
+          formErrors: [error.message],
+        },
+      };
+    } else {
+      return {
+        errors: {
+          formErrors: ["Error occured while adding comment"],
+        },
+      };
+    }
   }
 
   
