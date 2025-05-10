@@ -94,6 +94,8 @@ const RecentArticles: React.FC<RecenetArticlesProps> = ({ articles }) => {
 
 
 
-
+type DeleteButtonProps = {
+  articleId: string;
+};
 
 
