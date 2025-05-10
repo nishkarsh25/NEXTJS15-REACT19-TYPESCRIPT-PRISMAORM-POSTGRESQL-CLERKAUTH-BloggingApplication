@@ -8,6 +8,8 @@ type Props = {};
 const HeroSection = (props: Props) => {
   return (
     <section className="realtive min-h-[600px] w-full overflow-hidden bg-gradient-to-br from purple-600 via-indigo-950 to-indigo-950 ">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 before:absolute before:left-1/4 before:top-0 before:h-[500px] before:w-[500px] before:rounded-full before:bg-gradient-to-r before:to-indigo-600/20 before:blur-2xl " />
       
     </section>
   );
