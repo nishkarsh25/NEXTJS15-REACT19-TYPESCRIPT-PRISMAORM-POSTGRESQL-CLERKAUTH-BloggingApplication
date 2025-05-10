@@ -20,9 +20,15 @@ export const createComment = async (
   prevState: CreateCommentFormState,
   formData: FormData
 ): Promise<CreateCommentFormState> => {
-  
+  const result = createCommentSchema.safeParse({
+    body: formData.get("body") as string,
+  });
 
-  
+  if (!result.success) {
+    return {
+      errors: result.error.flatten().fieldErrors,
+    };
+  }
 
  
 
