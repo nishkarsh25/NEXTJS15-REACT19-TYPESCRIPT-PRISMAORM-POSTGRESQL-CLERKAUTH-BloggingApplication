@@ -38,5 +38,5 @@ export const fetchArticleByQuery = async (
     }),
   ]);
 
-  
+  return { articles, total };
 };
