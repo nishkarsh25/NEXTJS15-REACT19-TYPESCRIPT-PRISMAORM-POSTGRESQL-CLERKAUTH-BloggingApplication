@@ -8,6 +8,10 @@ import React from "react";
 const SearchInput = () => {
   const params = useSearchParams();
   
- 
+  return (
+    <form action={searchAction}>
+     
+    </form>
+  );
 };
 
