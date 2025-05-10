@@ -107,7 +107,11 @@ export const createArticle = async (
     };
   }
 
- 
+  try {
+    
+  } catch (error: unknown) {
+    
+  }
 
   
 };
