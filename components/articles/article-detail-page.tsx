@@ -71,7 +71,7 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
               <div>
                 <p className="font-medium">{article.author.name}</p>
                 <p className="text-sm">
-                  {article.createdAt.toString()}12 minute to read
+                   {article.createdAt.toDateString()} · {12} min read
                 </p>
               </div>
             </div>
