@@ -52,7 +52,35 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
   return (
     <div className="min-h-screen bg-backgorund">
       <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <article className="mx-auto max-w-3xl">
+          <header className="mb-12 ">
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-3 py-1 text-sm">web-developmnet</span>
+            </div>
 
+            <h1 className="text-4xl font-bold mb-4">
+              How to learn web developement in 2025
+            </h1>
+
+            <div className="flex items-center gap-4">
+              <Avatar>
+                <AvatarImage src={article.author.imageUrl || ""} />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+
+              <div>
+                <p className="font-medium">{article.author.name}</p>
+                <p className="text-sm">
+                  {article.createdAt.toString()}12 minute to read
+                </p>
+              </div>
+            </div>
+          </header>
+
+          
+
+          
+        </article>
       </main>
     </div>
   );
