@@ -20,9 +20,9 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
   const skip = (currentPage - 1) * ITEMS_PER_PAGE;
   const take = ITEMS_PER_PAGE;
 
-  
+  const { articles, total } = await fetchArticleByQuery(searchText, skip, take);
 
-  
+  const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 
   
 };
