@@ -25,3 +25,4 @@ const ArticleSearchInput = () => {
   );
 };
 
+export default ArticleSearchInput;
