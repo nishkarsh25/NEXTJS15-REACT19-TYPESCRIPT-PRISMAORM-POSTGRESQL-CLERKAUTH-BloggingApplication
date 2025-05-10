@@ -6,6 +6,11 @@ type EditArticleParams = {
   params: Promise<{ id: string }>;
 };
 
+const page: React.FC<EditArticleParams> = async ({ params }) => {
+  
 
+  
+  
+};
 
 
