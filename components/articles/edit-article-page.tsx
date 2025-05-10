@@ -98,7 +98,15 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
               </div>
             </div>
 
-            
+            <div className="space-y-2">
+              <Label>Content</Label>
+              <ReactQuill theme="snow" value={content} onChange={setContent} />
+              {formState.errors.content && (
+                <span className="text-red-600 text-sm">
+                  {formState.errors.content[0]}
+                </span>
+              )}
+            </div>
 
             
           </form>
