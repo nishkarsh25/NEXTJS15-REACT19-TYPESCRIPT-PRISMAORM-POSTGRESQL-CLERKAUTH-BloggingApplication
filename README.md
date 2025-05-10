@@ -55,7 +55,7 @@ With modular components, server-side rendering, and a responsive design, this pr
 
 ## Live Demo
 
-- You can try out the live demo of the discuss app [here](https://saas-nextjs-15-typescript-prisma-docker-clerk-openap-aywy56edu.vercel.app/).
+- You can try out the live demo of the discuss app [here](https://nextjs-15-react-19-typescript-prismaorm-postgresql-uv2fpcb5e.vercel.app/).
 
 ## Folder Structure
 
