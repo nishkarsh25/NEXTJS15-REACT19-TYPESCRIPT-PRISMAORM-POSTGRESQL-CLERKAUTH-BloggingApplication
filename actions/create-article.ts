@@ -32,7 +32,12 @@ export const createArticle = async (
   prevState: CreateArticlesFormState,
   formData: FormData
 ): Promise<CreateArticlesFormState> => {
-  
+  const result = createArticleSchema.safeParse({
+    title: formData.get("title"),
+    category: formData.get("category"),
+    content: formData.get("content"),
+  });
+
   
 
   
