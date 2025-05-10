@@ -28,7 +28,7 @@ const Home = (props: Props) => {
           </Suspense>
           <div className="text-center mt-12">
             <Link href={"/articles"}>
-              <Button className="rounded-full hover:bg-gray-900 hover:text-white dark:bg-white dark:hover:text-gray-900">
+              <Button className="cursor-pointer rounded-full hover:bg-gray-900 hover:text-white dark:bg-white dark:hover:text-gray-900">
                 View all articles
               </Button>
             </Link>

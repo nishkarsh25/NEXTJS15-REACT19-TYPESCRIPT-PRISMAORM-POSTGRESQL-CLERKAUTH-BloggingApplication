@@ -23,6 +23,8 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
   const { articles, total } = await fetchArticleByQuery(searchText, skip, take);
 
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+  console.log(totalPages);
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -67,7 +69,7 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
 
           <Link href={`?search=${searchText}&page=${currentPage + 1}`} passHref>
             <Button
-              disabled={currentPage === totalPages}
+              disabled={currentPage === totalPages || totalPages === 0}
               variant={"ghost"}
               size={"sm"}
             >
