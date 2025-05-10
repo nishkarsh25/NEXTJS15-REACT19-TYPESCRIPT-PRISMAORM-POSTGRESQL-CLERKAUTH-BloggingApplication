@@ -39,7 +39,7 @@ const TopArticles = async (props: Props) => {
           key={article.id}
         >
           <div className="p-6">
-            <Link href={"/articles/${article.id}"}>
+            <Link href={`/articles/${article.id}`}>
               <div className="relative mb-4 h-48 w-full overflow-hidden rounded-xl ">
                 <Image
                   src={article.featuredImage}
