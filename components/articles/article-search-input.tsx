@@ -5,5 +5,10 @@ import { Input } from "../ui/input";
 import { useSearchParams } from "next/navigation";
 import { searchAction } from "@/actions/search";
  
-
+const ArticleSearchInput = () => {
+  const searchParams = useSearchParams();
+  const searchText = searchParams.get("search") || "";
+ 
+  
+};
 
