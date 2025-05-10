@@ -15,4 +15,24 @@ type CreateCommentFormState = {
   };
 };
 
+export const createComment = async (
+  articleId: string,
+  prevState: CreateCommentFormState,
+  formData: FormData
+): Promise<CreateCommentFormState> => {
+  
 
+  
+
+ 
+
+  
+
+  
+
+  
+
+  
+
+  
+};
