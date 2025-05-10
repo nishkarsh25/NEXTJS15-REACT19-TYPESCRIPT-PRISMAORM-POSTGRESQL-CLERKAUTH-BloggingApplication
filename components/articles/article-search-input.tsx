@@ -9,6 +9,10 @@ const ArticleSearchInput = () => {
   const searchParams = useSearchParams();
   const searchText = searchParams.get("search") || "";
  
-  
+  return (
+    <form action={searchAction} className="mx-auto max-w-2xl">
+      
+    </form>
+  );
 };
 
