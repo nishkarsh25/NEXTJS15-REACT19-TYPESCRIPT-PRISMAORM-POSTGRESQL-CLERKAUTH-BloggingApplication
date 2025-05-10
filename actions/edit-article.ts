@@ -33,7 +33,18 @@ export const editArticle = async (
   prevState: CreateArticlesFormState,
   formData: FormData
 ): Promise<CreateArticlesFormState> => {
-  
+  const result = createArticleSchema.safeParse({
+    title: formData.get("title"),
+    category: formData.get("category"),
+    content: formData.get("content"),
+  });
+
+  if (!result.success) {
+    return {
+      errors: result.error.flatten().fieldErrors,
+    };
+  }
+
   
 
   
