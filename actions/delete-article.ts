@@ -9,5 +9,5 @@ export const deleteArticle = async (articleId: string) => {
   });
 
 
-  
+  revalidatePath("/dashboard");
 };
