@@ -50,7 +50,19 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
 
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
-            
+            <div className="space-y-2">
+              <Input
+                type="text"
+                name="title"
+                defaultValue={article.title}
+                placeholder="Enter a article title"
+              />
+              {formState.errors.title && (
+                <span className="text-red-600 text-sm">
+                  {formState.errors.title}
+                </span>
+              )}
+            </div>
 
             
 
