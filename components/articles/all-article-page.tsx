@@ -67,7 +67,6 @@ const AllArticlePage: React.FC<AllArticlePageProps> = async ({ articles }) => {
   );
 };
 
-
 export default AllArticlePage;
 
 const NoSearchResults = () => {
