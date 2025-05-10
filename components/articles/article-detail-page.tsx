@@ -38,7 +38,9 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
     },
   });
 
-  
+  const likes = await prisma.like.findMany({
+    where: { articleId: article.id },
+  });
 
   
 
