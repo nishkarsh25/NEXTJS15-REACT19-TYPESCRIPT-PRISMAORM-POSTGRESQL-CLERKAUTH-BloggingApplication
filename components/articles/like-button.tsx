@@ -39,9 +39,13 @@ const LikeButton: React.FC<LikeButtonProps> = ({
         </Button>
       </form>
 
-      
+      <Button variant={"ghost"} className="gap-2">
+        <Bookmark className="h-5 w-5" />
+      </Button>
 
-      
+      <Button variant={"ghost"} className="gap-2">
+        <Share2 className="h-5 w-5" />
+      </Button>
     </div>
   );
 };
