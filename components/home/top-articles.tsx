@@ -6,6 +6,12 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { prisma } from "@/lib/prisma";
 
+type Props = {};
 
+const TopArticles = async (props: Props) => {
+  
+
+  
+};
 
 
