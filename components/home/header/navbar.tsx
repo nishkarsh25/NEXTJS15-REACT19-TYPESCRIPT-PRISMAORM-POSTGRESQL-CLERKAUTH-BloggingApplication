@@ -102,7 +102,19 @@ const Navbar = (props: Props) => {
         </div>
       </div>
 
-      
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden py-4 space-y-4 border-t">
+          {/* Search Bar (Mobile) */}
+          <form action={searchAction} className="px-4">
+            
+          </form>
+
+          
+
+          
+        </div>
+      )}
     </div>
   );
 };
