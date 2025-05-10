@@ -52,7 +52,11 @@ export const createComment = async (
     };
   }
 
-  
+  try {
+    
+  } catch (error: unknown) {
+    
+  }
 
   
 };
