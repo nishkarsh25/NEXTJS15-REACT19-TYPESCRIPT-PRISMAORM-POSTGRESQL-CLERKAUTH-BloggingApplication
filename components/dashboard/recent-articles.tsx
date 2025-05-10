@@ -43,7 +43,11 @@ const RecentArticles: React.FC<RecenetArticlesProps> = ({ articles }) => {
         </div>
       </CardHeader>
 
-      
+      {!articles.length ? (
+        
+      ) : (
+        
+      )}
     </Card>
   );
 };
