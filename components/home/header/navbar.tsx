@@ -63,7 +63,28 @@ const Navbar = (props: Props) => {
             </Link>
           </div>
 
-          
+          {/* Right Section */}
+          <div className="flex items-centergap-4">
+            <SearchInput />
+
+            <ToggleMode />
+
+            {/* User Actions */}
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+
+            <SignedOut>
+              <div className="hidden md:flex items-center gap-2">
+                <SignInButton>
+                  <Button variant={"outline"}>Login</Button>
+                </SignInButton>
+                <SignUpButton>
+                  <Button>Signup</Button>
+                </SignUpButton>
+              </div>
+            </SignedOut>
+          </div>
 
           
         </div>
