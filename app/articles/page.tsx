@@ -7,7 +7,9 @@ import { fetchArticleByQuery } from "@/lib/query/fetch-article-by-query";
 import Link from "next/link";
 import React, { Suspense } from "react";
 
-
+type SearchPageProps = {
+  searchParams: Promise<{ search?: string; page?: string }>;
+};
 
 
 
