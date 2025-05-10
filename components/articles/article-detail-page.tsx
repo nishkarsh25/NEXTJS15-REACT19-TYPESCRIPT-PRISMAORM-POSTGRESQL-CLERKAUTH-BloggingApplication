@@ -82,7 +82,13 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
 
-          
+          {/* Article Action url */}
+          <LikeButton articleId={article.id} likes={likes} isLiked={isLiked} />
+
+          <CommentInput articleId={article.id} />
+
+          {/* Comment Section */}
+          <CommentList comments={comments} />
         </article>
       </main>
     </div>
