@@ -1,14 +1,16 @@
 "use client";
-import React, { useOptimistic, useTransition } from "react";
-import { Button } from "../ui/button";
+
+import { Button } from "@/components/ui/button";
 import { Bookmark, Share2, ThumbsUp } from "lucide-react";
-import { Like } from "@prisma/client";
+import React, { useOptimistic, useTransition } from "react";
+
+import type { Like } from "@prisma/client";
 import { likeDislikeToggle } from "@/actions/like-dislike";
 
 type LikeButtonProps = {
   articleId: string;
   likes: Like[];
-  isLiked: Boolean;
+  isLiked: boolean;
 };
 
 const LikeButton: React.FC<LikeButtonProps> = ({
@@ -16,35 +18,35 @@ const LikeButton: React.FC<LikeButtonProps> = ({
   likes,
   isLiked,
 }) => {
-  const [optimisticLike, setOptimisticLike] = useOptimistic(likes.length);
+  const [optimisticLikes, setOptimisticLikes] = useOptimistic(likes.length);
   const [isPending, startTransition] = useTransition();
 
-  const handleLikeDislike = async () => {
+  const handleLike = async () => {
     startTransition(async () => {
-      setOptimisticLike(isLiked ? optimisticLike - 1 : optimisticLike + 1); //optimistic ui update
+      setOptimisticLikes(isLiked ? optimisticLikes - 1 : optimisticLikes + 1); // Optimistically update UI
       await likeDislikeToggle(articleId);
     });
   };
 
   return (
     <div className="flex gap-4 mb-12 border-t pt-8">
-      <form action={handleLikeDislike}>
+      <form action={handleLike}>
         <Button
-          disabled={isPending}
-          type="submit"
-          variant={"ghost"}
+          type="button"
+          variant="ghost"
           className="gap-2"
+          onClick={handleLike}
+          disabled={isPending}
         >
-          <ThumbsUp className="h-5 w-5" />0
+          <ThumbsUp className="h-5 w-5" />
+          {optimisticLikes}
         </Button>
       </form>
-
-      <Button variant={"ghost"} className="gap-2">
-        <Bookmark className="h-5 w-5" />
+      <Button variant="ghost" className="gap-2">
+        <Bookmark className="h-5 w-5" /> Save
       </Button>
-
-      <Button variant={"ghost"} className="gap-2">
-        <Share2 className="h-5 w-5" />
+      <Button variant="ghost" className="gap-2">
+        <Share2 className="h-5 w-5" /> Share
       </Button>
     </div>
   );

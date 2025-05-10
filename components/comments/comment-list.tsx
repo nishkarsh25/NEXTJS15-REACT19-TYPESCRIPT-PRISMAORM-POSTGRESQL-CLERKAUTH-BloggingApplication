@@ -34,7 +34,7 @@ const CommentList: React.FC<CommentListProps> = ({ comments }) => {
               </span>
             </div>
 
-            <p>Comment Body</p>
+            <p>{comment.body}</p>
           </div>
         </div>
       ))}
