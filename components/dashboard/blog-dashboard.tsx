@@ -94,4 +94,4 @@ const BlogDashBoard = async (props: Props) => {
   );
 };
 
-
+export default BlogDashBoard;
