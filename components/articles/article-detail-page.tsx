@@ -77,7 +77,10 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
             </div>
           </header>
 
-          
+          <section
+            className="mb-12 max-w-none"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          />
 
           
         </article>
