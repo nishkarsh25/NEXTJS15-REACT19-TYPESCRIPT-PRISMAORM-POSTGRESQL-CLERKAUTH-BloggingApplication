@@ -18,7 +18,13 @@ const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
 
   return (
     <form action={action} className="mb-8">
-      
+      <div className="flex gap-4">
+        <Avatar>
+          <AvatarImage src="" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        
+      </div>
     </form>
   );
 };
