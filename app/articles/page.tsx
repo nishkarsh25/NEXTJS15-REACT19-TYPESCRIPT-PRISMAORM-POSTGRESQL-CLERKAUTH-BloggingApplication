@@ -81,7 +81,7 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
   );
 };
 
-
+export default page;
 
 export function AllArticlesPageSkeleton() {
   return (
