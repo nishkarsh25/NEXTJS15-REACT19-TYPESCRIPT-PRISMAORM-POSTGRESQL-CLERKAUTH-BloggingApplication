@@ -150,7 +150,19 @@ const Navbar = (props: Props) => {
             </Link>
           </div>
 
-          
+          {/* Mobile Auth Buttons */}
+          <SignedOut>
+            <div className="px-4 flex flex-col gap-2">
+              <SignInButton>
+                <Button variant="outline" className="w-full">
+                  Login
+                </Button>
+              </SignInButton>
+              <SignUpButton>
+                <Button className="w-full">Sign up</Button>
+              </SignUpButton>
+            </div>
+          </SignedOut>
         </div>
       )}
     </div>
