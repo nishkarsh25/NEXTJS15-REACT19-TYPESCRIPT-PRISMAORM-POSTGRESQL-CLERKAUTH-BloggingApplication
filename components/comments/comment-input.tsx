@@ -11,7 +11,10 @@ type CommentInputProps = {
 };
 
 const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
-  
+  const [formState, action, isPending] = useActionState(
+    createComment.bind(null, articleId),
+    { errors: {} }
+  );
 
   
 };
