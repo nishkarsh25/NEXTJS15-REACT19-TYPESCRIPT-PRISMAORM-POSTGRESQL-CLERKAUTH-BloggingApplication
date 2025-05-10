@@ -33,7 +33,11 @@ const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
               {isPending ? "Loading" : "Post Comment"}
             </Button>
           </div>
-          
+          {formState.errors.formErrors && (
+            <div className="p-2 border border-red-600 bg-red-100">
+              {formState.errors.formErrors[0]}
+            </div>
+          )}
         </div>
       </div>
     </form>
