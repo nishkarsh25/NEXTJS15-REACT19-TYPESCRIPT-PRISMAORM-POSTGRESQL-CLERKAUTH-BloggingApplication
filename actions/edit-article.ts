@@ -124,9 +124,29 @@ export const editArticle = async (
   }
 
   try {
-    
+    await prisma.articles.update({
+      where: { id: articleId },
+      data: {
+        title: result.data.title,
+        category: result.data.category,
+        content: result.data.content,
+        featuredImage: imageUrl,
+      },
+    });
   } catch (error: unknown) {
-    
+    if (error instanceof Error) {
+      return {
+        errors: {
+          formErrors: [error.message],
+        },
+      };
+    } else {
+      return {
+        errors: {
+          formErrors: ["Some internal server error occured"],
+        },
+      };
+    }
   }
 
   
