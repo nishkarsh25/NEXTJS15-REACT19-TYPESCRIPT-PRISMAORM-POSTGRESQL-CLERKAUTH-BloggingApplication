@@ -19,7 +19,12 @@ export const likeDislikeToggle = async (articleId: string) => {
     throw new Error("User does not exist in the database");
   }
 
-  
+  const exisitingLike = await prisma.like.findFirst({
+    where: {
+      articleId,
+      userId: user.id,
+    },
+  });
 
   
   
