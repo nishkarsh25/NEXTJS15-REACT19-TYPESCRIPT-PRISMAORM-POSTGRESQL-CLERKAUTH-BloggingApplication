@@ -80,9 +80,48 @@ export const editArticle = async (
       },
     };
   }
-  
+  //start editing articles
 
- 
+  let imageUrl = existingArticle.featuredImage;
+
+  const imageFile = formData.get("featuredImage") as File | null;
+  if (imageFile && imageFile.name !== "undefined") {
+    try {
+      const arrayBuffer = await imageFile.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      const uploadResponse: UploadApiResponse | undefined = await new Promise(
+        (resolve, reject) => {
+          const uploadStream = cloudinary.uploader.upload_stream(
+            { resource_type: "auto" },
+            (error, result) => {
+              if (error) {
+                reject(error);
+              } else {
+                resolve(result);
+              }
+            }
+          );
+          uploadStream.end(buffer);
+        }
+      );
+      if (uploadResponse?.secure_url) {
+        imageUrl = uploadResponse?.secure_url;
+      } else {
+        return {
+          errors: {
+            featuredImage: ["failed to upload image. Please try again"],
+          },
+        };
+      }
+    } catch (error) {
+      return {
+        errors: {
+          formErrors: ["Error uploading image. Please try again"],
+        },
+      };
+    }
+  }
 
   
   
