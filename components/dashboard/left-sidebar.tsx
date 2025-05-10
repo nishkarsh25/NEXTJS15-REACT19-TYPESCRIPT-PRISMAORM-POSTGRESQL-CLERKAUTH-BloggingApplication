@@ -56,7 +56,38 @@ const DashboardSidebar = () => {
           <span>ByteCode</span>
         </Link>
       </div>
-      
+      <nav>
+        <Link href="/dashboard/articles/create">
+          <Button className="w-full justify-start">
+            <LayoutDashboard className="w-5 h-5 mr-2" />
+            Overview
+          </Button>
+        </Link>
+        <Link href="/dashboard">
+          <Button className="w-full justify-start">
+            <FileText className="w-5 h-5 mr-2" />
+            Articles
+          </Button>
+        </Link>
+        <Link href="/dashboard">
+          <Button className="w-full justify-start">
+            <MessageCircle className="w-5 h-5 mr-2" />
+            Comments
+          </Button>
+        </Link>
+        <Link href="/dashboard">
+          <Button className="w-full justify-start">
+            <BarChart className="w-5 h-5 mr-2" />
+            Analytics
+          </Button>
+        </Link>
+        <Link href="/dashboard">
+          <Button className="w-full justify-start">
+            <Settings className="w-5 h-5 mr-2" />
+            Settings
+          </Button>
+        </Link>
+      </nav>
     </div>
   );
 };
