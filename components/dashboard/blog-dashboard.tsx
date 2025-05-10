@@ -6,8 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import RecentArticles from "./recent-articles";
 import { prisma } from "@/lib/prisma";
 
+type Props = {};
 
-
-
+const BlogDashBoard = async (props: Props) => {
+  
+  
+};
 
 
