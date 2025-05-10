@@ -73,7 +73,44 @@ const BlogFooter = () => {
             </ul>
           </div>
 
-          
+          {/* Legal */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-foreground">Legal</h3>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </div>
 
           
         </div>
