@@ -36,8 +36,10 @@ const BlogDashBoard = async (props: Props) => {
         </div>
 
         <Link href={"/dashboard/articles/create"}>
-          <PlusCircle className="h-4 w-4" />
-          <Button>New article</Button>
+          <Button className="gap-2">
+            <PlusCircle className="h-4 w-4" />
+            New Article
+          </Button>
         </Link>
       </div>
 

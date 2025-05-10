@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Left Section - Logo & Desktop Navigation */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center w-1/2 justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <span className="text-2xl font-bold">
