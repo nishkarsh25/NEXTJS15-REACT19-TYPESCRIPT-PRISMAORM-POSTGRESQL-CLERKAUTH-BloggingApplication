@@ -38,11 +38,21 @@ export const createArticle = async (
     content: formData.get("content"),
   });
 
-  
+  if (!result.success) {
+    return {
+      errors: result.error.flatten().fieldErrors,
+    };
+  }
 
-  
+  const { userId } = await auth();
 
-  
+  if (!userId) {
+    return {
+      errors: {
+        formErrors: ["You have to login first"],
+      },
+    };
+  }
 
   
 
