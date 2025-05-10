@@ -11,7 +11,9 @@ const ArticleSearchInput = () => {
  
   return (
     <form action={searchAction} className="mx-auto max-w-2xl">
-      
+      <div className="relative">
+        
+      </div>
     </form>
   );
 };
