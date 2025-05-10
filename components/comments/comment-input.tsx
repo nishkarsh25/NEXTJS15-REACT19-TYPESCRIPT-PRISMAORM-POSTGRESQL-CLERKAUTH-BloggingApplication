@@ -10,6 +10,10 @@ type CommentInputProps = {
   articleId: string;
 };
 
+const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
+  
 
+  
+};
 
 
