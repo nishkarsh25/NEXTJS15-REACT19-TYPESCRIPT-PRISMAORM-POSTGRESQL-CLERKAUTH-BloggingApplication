@@ -28,7 +28,14 @@ export const fetchArticleByQuery = async (
       take: take,
     }),
 
-    
+    prisma.articles.count({
+      where: {
+        OR: [
+          { title: { contains: searchText, mode: "insensitive" } },
+          { category: { contains: searchText, mode: "insensitive" } },
+        ],
+      },
+    }),
   ]);
 
   
