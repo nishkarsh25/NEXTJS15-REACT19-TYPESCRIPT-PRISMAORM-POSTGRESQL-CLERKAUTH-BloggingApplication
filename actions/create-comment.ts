@@ -76,5 +76,6 @@ export const createComment = async (
     }
   }
 
+  revalidatePath(`/articles/${articleId}`);
   
 };
