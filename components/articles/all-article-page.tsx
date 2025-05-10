@@ -23,7 +23,9 @@ type AllArticlePageProps = {
 const AllArticlePage: React.FC<AllArticlePageProps> = async ({ articles }) => {
   
 
-  
+  if (articles.length <= 0) {
+    return <NoSearchResults />;
+  }
 
   
 };
