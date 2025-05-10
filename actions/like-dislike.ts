@@ -43,5 +43,5 @@ export const likeDislikeToggle = async (articleId: string) => {
     });
   }
 
-  
+  revalidatePath(`/articles/${articleId}`);
 };
