@@ -8,6 +8,11 @@ const createCommentSchema = z.object({
   body: z.string().min(1),
 });
 
-
+type CreateCommentFormState = {
+  errors: {
+    body?: string[];
+    formErrors?: string[];
+  };
+};
 
 
