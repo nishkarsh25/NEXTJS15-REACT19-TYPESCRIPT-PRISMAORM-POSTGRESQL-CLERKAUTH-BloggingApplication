@@ -9,3 +9,4 @@ const page = (props: Props) => {
   )
 }
 
+export default page
