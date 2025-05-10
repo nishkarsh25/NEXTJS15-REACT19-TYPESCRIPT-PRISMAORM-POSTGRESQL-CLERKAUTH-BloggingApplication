@@ -16,7 +16,11 @@ const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
     { errors: {} }
   );
 
-  
+  return (
+    <form action={action} className="mb-8">
+      
+    </form>
+  );
 };
 
 
