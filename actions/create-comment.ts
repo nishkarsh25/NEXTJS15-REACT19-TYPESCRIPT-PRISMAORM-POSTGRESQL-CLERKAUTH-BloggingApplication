@@ -30,9 +30,15 @@ export const createComment = async (
     };
   }
 
- 
+  const { userId } = await auth();
 
-  
+  if (!userId) {
+    return {
+      errors: {
+        formErrors: ["You have to login first"],
+      },
+    };
+  }
 
   
 
