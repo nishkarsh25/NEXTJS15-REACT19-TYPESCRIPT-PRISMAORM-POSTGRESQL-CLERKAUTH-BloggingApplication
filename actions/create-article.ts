@@ -67,7 +67,16 @@ export const createArticle = async (
       },
     };
   }
-  
+  //start creating articles
+
+  const imageFile = formData.get("featuredImage") as File | null;
+  if (!imageFile || imageFile.name === "undefined") {
+    return {
+      errors: {
+        featuredImage: ["Image file is required"],
+      },
+    };
+  }
 
   
 
