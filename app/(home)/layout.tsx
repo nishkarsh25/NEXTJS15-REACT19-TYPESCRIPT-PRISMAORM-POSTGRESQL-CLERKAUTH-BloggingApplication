@@ -6,7 +6,9 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
   const user = await currentUser();
   if (!user) return null;
 
- 
+  const loggedInUser = await prisma.user.findUnique({
+    where: { clerkUserId: user.id },
+  });
 
   
   
