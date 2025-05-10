@@ -23,7 +23,9 @@ const Home = (props: Props) => {
             <p>Discover our most popular and trending content</p>
           </div>
 
-          
+          <Suspense fallback={<AllArticlesPageSkeleton />}>
+            <TopArticles />
+          </Suspense>
           
         </div>
       </section>
