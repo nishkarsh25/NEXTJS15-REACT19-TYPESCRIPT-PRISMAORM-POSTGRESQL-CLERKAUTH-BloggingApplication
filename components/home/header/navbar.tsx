@@ -15,6 +15,11 @@ import {
 } from "@clerk/nextjs";
 import { searchAction } from "@/actions/search";
 
+type Props = {};
 
+const Navbar = (props: Props) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+};
 
 
