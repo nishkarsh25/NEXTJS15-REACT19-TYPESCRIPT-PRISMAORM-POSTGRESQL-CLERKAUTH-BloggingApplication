@@ -8,7 +8,19 @@ import CommentInput from "../comments/comment-input";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
 
-
+type ArticleDetailPageProps = {
+  article: Prisma.ArticlesGetPayload<{
+    include: {
+      author: {
+        select: {
+          name: true;
+          email: true;
+          imageUrl: true;
+        };
+      };
+    };
+  }>;
+};
 
 
 
