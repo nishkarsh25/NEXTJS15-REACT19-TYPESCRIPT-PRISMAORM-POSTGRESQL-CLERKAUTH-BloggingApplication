@@ -47,7 +47,7 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
     where: { clerkUserId: userId as string },
   });
 
-  
+  const isLiked: boolean = likes.some((like) => like.userId === user?.id);
 
   
 };
