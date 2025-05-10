@@ -50,6 +50,7 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
   const isLiked: boolean = likes.some((like) => like.userId === user?.id);
 
   return (
+    
     <div className="min-h-screen bg-backgorund">
       
     </div>
