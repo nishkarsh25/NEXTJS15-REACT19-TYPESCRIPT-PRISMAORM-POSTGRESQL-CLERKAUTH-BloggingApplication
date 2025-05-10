@@ -39,4 +39,4 @@ const ToggleMode = () => {
   );
 };
 
-
+export default ToggleMode;
