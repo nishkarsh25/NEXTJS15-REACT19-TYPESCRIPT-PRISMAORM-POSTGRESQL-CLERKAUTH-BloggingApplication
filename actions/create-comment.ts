@@ -77,5 +77,6 @@ export const createComment = async (
   }
 
   revalidatePath(`/articles/${articleId}`);
+  revalidatePath(`/dashboard`);
   return { errors: {} };
 };
