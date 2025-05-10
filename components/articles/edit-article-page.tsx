@@ -108,7 +108,12 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
               )}
             </div>
 
-            
+            <div className="flex justify-end gap-4 ">
+              <Button variant={"outline"}>Cancel</Button>
+              <Button type="submit" disabled={isPending}>
+                {isPending ? "Loading...." : "Edit Article"}
+              </Button>
+            </div>
           </form>
         </CardContent>
       </Card>
