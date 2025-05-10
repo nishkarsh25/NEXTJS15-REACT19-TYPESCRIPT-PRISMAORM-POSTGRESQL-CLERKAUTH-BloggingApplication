@@ -56,7 +56,24 @@ const CreateArticlesPage = (props: Props) => {
               )}
             </div>
 
-            
+            <div className="space-y-2">
+              <Label>Category</Label>
+              <select
+                className="flex h-10 w-full rounded-md"
+                name="category"
+                id="category"
+              >
+                <option value="">Select category</option>
+                <option value="technology">Technology</option>
+                <option value="programming">Programming</option>
+                <option value="web-developmentt">Web Development</option>
+              </select>
+              {formState.errors.category && (
+                <span className="text-red-600 text-sm">
+                  {formState.errors.category}
+                </span>
+              )}
+            </div>
 
             
 
