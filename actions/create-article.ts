@@ -18,7 +18,15 @@ const createArticleSchema = z.object({
   content: z.string().min(10),
 });
 
-
+type CreateArticlesFormState = {
+  errors: {
+    title?: string[];
+    category?: string[];
+    featuredImage?: string[];
+    content?: string[];
+    formErrors?: string[];
+  };
+};
 
 
 
