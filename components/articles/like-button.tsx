@@ -5,7 +5,11 @@ import { Bookmark, Share2, ThumbsUp } from "lucide-react";
 import { Like } from "@prisma/client";
 import { likeDislikeToggle } from "@/actions/like-dislike";
 
-
+type LikeButtonProps = {
+  articleId: string;
+  likes: Like[];
+  isLiked: Boolean;
+};
 
 
 
