@@ -24,7 +24,18 @@ model User {
   likes       Like[]
 }
 
-
+model Articles {
+  id            String    @id @default(cuid())
+  title         String
+  content       String
+  category      String
+  featuredImage String
+  author        User      @relation(fields: [authorId], references: [id])
+  authorId      String
+  comments      Comment[]
+  likes         Like[]
+  createdAt     DateTime  @default(now())
+}
 
 
 
