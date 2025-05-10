@@ -58,7 +58,20 @@ const BlogDashBoard = async (props: Props) => {
           </CardContent>
         </Card>
 
-        
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="font-medium text-sm">
+              Total Comments
+            </CardTitle>
+            <FileText className="h-4 w-4" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{totalComments}</div>
+            <p className="text-sm text-muted-foreground mt-1">
+              12 awaiting moderation
+            </p>
+          </CardContent>
+        </Card>
 
         
       </div>
