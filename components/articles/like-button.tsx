@@ -19,7 +19,12 @@ const LikeButton: React.FC<LikeButtonProps> = ({
   const [optimisticLike, setOptimisticLike] = useOptimistic(likes.length);
   const [isPending, startTransition] = useTransition();
 
-  
+  const handleLikeDislike = async () => {
+    startTransition(async () => {
+      setOptimisticLike(isLiked ? optimisticLike - 1 : optimisticLike + 1); //optimistic ui update
+      await likeDislikeToggle(articleId);
+    });
+  };
 
   
 };
