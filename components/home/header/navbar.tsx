@@ -86,7 +86,19 @@ const Navbar = (props: Props) => {
             </SignedOut>
           </div>
 
-          
+          {/* Mobile Menu Button */}
+          <Button
+            variant={"ghost"}
+            size={"icon"}
+            className="md:hidden text-muted-foreground hover:text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-5 w-5 " />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </Button>
         </div>
       </div>
 
