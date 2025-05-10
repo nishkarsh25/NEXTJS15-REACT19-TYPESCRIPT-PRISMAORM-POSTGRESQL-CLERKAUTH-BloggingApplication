@@ -43,7 +43,20 @@ const BlogDashBoard = async (props: Props) => {
 
       {/* Quick stats */}
       <div className="grid md:grid-cols-3 mb-8 gap-4 ">
-        
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="font-medium text-sm">
+              Total Articles
+            </CardTitle>
+            <FileText className="h-4 w-4" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{articles.length}</div>
+            <p className="text-sm text-muted-foreground mt-1">
+              +5 from last month
+            </p>
+          </CardContent>
+        </Card>
 
         
 
