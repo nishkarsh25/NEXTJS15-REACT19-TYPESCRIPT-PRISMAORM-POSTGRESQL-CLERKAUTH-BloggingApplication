@@ -103,4 +103,4 @@ const CreateArticlesPage = (props: Props) => {
   );
 };
 
-
+export default CreateArticlesPage;
