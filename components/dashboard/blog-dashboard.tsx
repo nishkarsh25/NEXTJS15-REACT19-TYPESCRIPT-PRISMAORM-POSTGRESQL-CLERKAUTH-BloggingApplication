@@ -89,7 +89,7 @@ const BlogDashBoard = async (props: Props) => {
         </Card>
       </div>
 
-      
+      <RecentArticles articles={articles} />
     </main>
   );
 };
