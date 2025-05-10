@@ -26,7 +26,16 @@ const CommentList: React.FC<CommentListProps> = ({ comments }) => {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
 
-          
+          <div className="flex-1">
+            <div className="mb-2">
+              <span>{comment.author.name}</span>
+              <span className="text-sm ml-2">
+                {comment.createdAt.toDateString()}
+              </span>
+            </div>
+
+            <p>Comment Body</p>
+          </div>
         </div>
       ))}
     </div>
