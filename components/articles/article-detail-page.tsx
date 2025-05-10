@@ -95,4 +95,4 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
   );
 };
 
-
+export default ArticleDetailPage;
