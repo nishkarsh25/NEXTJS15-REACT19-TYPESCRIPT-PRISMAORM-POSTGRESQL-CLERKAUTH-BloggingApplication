@@ -36,7 +36,36 @@ const CreateArticlesPage = (props: Props) => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      
+      <Card>
+        <CardHeader>
+          <CardTitle>Create New Article</CardTitle>
+        </CardHeader>
+
+        <CardContent>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="space-y-2">
+              <Input
+                type="text"
+                name="title"
+                placeholder="Enter a article title"
+              />
+              {formState.errors.title && (
+                <span className="text-red-600 text-sm">
+                  {formState.errors.title}
+                </span>
+              )}
+            </div>
+
+            
+
+            
+
+            
+
+            
+          </form>
+        </CardContent>
+      </Card>
     </div>
   );
 };
