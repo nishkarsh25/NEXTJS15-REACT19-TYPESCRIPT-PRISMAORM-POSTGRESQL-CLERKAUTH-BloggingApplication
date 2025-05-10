@@ -28,4 +28,27 @@ type CreateArticlesFormState = {
   };
 };
 
+export const editArticle = async (
+  articleId: string,
+  prevState: CreateArticlesFormState,
+  formData: FormData
+): Promise<CreateArticlesFormState> => {
+  
+  
 
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+ 
+
+  
+  
+};
