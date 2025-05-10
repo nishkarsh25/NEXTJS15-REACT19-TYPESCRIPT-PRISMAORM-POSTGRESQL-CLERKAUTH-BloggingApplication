@@ -108,7 +108,15 @@ export const createArticle = async (
   }
 
   try {
-    
+    await prisma.articles.create({
+      data: {
+        title: result.data.title,
+        category: result.data.category,
+        content: result.data.content,
+        featuredImage: imageUrl,
+        authorId: existingUser.id,
+      },
+    });
   } catch (error: unknown) {
     
   }
