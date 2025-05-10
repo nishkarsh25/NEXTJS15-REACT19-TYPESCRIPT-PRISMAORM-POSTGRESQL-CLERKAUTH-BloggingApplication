@@ -6,7 +6,9 @@ import { AvatarFallback } from "@radix-ui/react-avatar";
 import { Button } from "../ui/button";
 import { createComment } from "@/actions/create-comment";
 
-
+type CommentInputProps = {
+  articleId: string;
+};
 
 
 
