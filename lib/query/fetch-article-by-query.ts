@@ -5,9 +5,11 @@ export const fetchArticleByQuery = async (
   skip: number,
   take: number
 ) => {
-  
+  const [articles, total] = await prisma.$transaction([
+    
 
     
+  ]);
 
   
 };
