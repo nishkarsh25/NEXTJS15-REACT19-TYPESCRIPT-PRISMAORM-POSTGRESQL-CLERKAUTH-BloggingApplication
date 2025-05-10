@@ -42,4 +42,4 @@ const CommentList: React.FC<CommentListProps> = ({ comments }) => {
   );
 };
 
-
+export default CommentList;
