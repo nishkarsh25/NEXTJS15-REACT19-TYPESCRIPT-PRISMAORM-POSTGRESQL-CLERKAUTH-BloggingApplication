@@ -75,7 +75,10 @@ const CreateArticlesPage = (props: Props) => {
               )}
             </div>
 
-            
+            <div className="space-y-2">
+              <Label htmlFor="featuredImage">Featured Image</Label>
+              <Input type="file" id="featuredImage" accept="image/*" />
+            </div>
 
             
 
