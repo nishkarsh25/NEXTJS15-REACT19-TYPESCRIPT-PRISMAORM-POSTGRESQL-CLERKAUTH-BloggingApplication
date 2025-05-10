@@ -118,7 +118,37 @@ const Navbar = (props: Props) => {
             </div>
           </form>
 
-          
+          {/* Mobile Navigation Links */}
+          <div className="space-y-2 px-4">
+            <Link
+              href="/articles"
+              className="block px-3 py-2 text-base font-medium text-foreground"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Articles
+            </Link>
+            <Link
+              href="/tutorials"
+              className="block px-3 py-2 text-base font-medium text-foreground"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Tutorials
+            </Link>
+            <Link
+              href="/about"
+              className="block px-3 py-2 text-base font-medium text-foreground"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/dashboard"
+              className="block px-3 py-2 text-base font-medium text-foreground"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Dashboard
+            </Link>
+          </div>
 
           
         </div>
