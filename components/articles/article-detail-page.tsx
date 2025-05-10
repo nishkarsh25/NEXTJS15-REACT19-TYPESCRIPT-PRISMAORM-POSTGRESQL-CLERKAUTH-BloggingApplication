@@ -42,7 +42,10 @@ const ArticleDetailPage: React.FC<ArticleDetailPageProps> = async ({
     where: { articleId: article.id },
   });
 
-  
+  const { userId } = await auth();
+  const user = await prisma.user.findUnique({
+    where: { clerkUserId: userId as string },
+  });
 
   
 
