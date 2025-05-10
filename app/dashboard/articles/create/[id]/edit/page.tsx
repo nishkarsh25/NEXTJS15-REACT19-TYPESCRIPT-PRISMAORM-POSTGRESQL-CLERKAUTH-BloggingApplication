@@ -13,7 +13,11 @@ const page: React.FC<EditArticleParams> = async ({ params }) => {
   });
 
   if (!article) return <h1>Article not found for this {id}</h1>;
-  
+  return (
+    <div>
+      <EditArticlePage article={article} />
+    </div>
+  );
 };
 
 
