@@ -41,7 +41,14 @@ const BlogDashBoard = async (props: Props) => {
         </Link>
       </div>
 
-      
+      {/* Quick stats */}
+      <div className="grid md:grid-cols-3 mb-8 gap-4 ">
+        
+
+        
+
+        
+      </div>
 
       
     </main>
