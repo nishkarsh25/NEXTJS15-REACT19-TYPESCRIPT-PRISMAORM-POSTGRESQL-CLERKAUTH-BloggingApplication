@@ -98,4 +98,7 @@ type DeleteButtonProps = {
   articleId: string;
 };
 
-
+const DeleteButton: React.FC<DeleteButtonProps> = ({ articleId }) => {
+  const [isPending, startTransition] = useTransition();
+  
+};
