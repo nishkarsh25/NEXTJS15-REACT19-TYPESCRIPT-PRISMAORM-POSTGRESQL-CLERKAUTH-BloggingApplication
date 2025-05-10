@@ -29,7 +29,6 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
   const [formState, action, isPending] = useActionState(editArticle.bind(null,article.id), {
     errors: {},
   });
-  
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,7 +41,29 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
     });
   };
 
- 
+  return (
+    <div className="max-w-4xl mx-auto p-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Create New Article</CardTitle>
+        </CardHeader>
+
+        <CardContent>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            
+
+            
+
+            
+
+            
+
+            
+          </form>
+        </CardContent>
+      </Card>
+    </div>
+  );
 };
 
 
