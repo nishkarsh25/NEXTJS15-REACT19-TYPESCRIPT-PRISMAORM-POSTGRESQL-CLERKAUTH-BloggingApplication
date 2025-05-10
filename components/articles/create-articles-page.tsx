@@ -90,7 +90,12 @@ const CreateArticlesPage = (props: Props) => {
               )}
             </div>
 
-            
+            <div className="flex justify-end gap-4 ">
+              <Button variant={"outline"}>Cancel</Button>
+              <Button type="submit" disabled={isPending}>
+                {isPending ? "Loading...." : "Publish Articles"}
+              </Button>
+            </div>
           </form>
         </CardContent>
       </Card>
