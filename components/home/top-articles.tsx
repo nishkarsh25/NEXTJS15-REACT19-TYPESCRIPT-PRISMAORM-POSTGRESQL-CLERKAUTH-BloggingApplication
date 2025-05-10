@@ -9,7 +9,22 @@ import { prisma } from "@/lib/prisma";
 type Props = {};
 
 const TopArticles = async (props: Props) => {
-  
+  const articles = await prisma.articles.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+
+    include: {
+      comments: true,
+      author: {
+        select: {
+          name: true,
+          email: true,
+          imageUrl: true,
+        },
+      },
+    },
+  });
 
   
 };
