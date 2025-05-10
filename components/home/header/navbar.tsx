@@ -35,7 +35,33 @@ const Navbar = (props: Props) => {
             </Link>
           </div>
 
-         
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              href={"/articles"}
+              className="text-sm font-medium text-foreground transition-colors hover:text-foreground"
+            >
+              Articles
+            </Link>
+            <Link
+              href={"/tutorial"}
+              className="text-sm font-medium text-foreground transition-colors hover:text-foreground"
+            >
+              Tutorial
+            </Link>
+            <Link
+              href={"/about"}
+              className="text-sm font-medium text-foreground transition-colors hover:text-foreground"
+            >
+              About
+            </Link>
+            <Link
+              href={"/dashboard"}
+              className="text-sm font-medium text-foreground transition-colors hover:text-foreground"
+            >
+              Dashboard
+            </Link>
+          </div>
 
           
 
