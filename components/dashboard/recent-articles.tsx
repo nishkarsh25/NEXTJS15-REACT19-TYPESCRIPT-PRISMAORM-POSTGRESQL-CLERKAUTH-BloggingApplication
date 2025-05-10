@@ -16,7 +16,20 @@ import Link from "next/link";
 import { Prisma } from "@prisma/client";
 import { deleteArticle } from "@/actions/delete-article";
 
-
+type RecenetArticlesProps = {
+  articles: Prisma.ArticlesGetPayload<{
+    include: {
+      comments: true;
+      author: {
+        select: {
+          name: true;
+          email: true;
+          imageUrl: true;
+        };
+      };
+    };
+  }>[];
+};
 
 
 
