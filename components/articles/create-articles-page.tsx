@@ -18,7 +18,10 @@ type Props = {};
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
 const CreateArticlesPage = (props: Props) => {
-  
+  const [content, setContent] = useState("");
+  const [formState, action, isPending] = useActionState(createArticle, {
+    errors: {},
+  });
 
   
 
