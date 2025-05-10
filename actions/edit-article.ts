@@ -123,6 +123,11 @@ export const editArticle = async (
     }
   }
 
-  
+  try {
+    
+  } catch (error: unknown) {
+    
+  }
+
   
 };
