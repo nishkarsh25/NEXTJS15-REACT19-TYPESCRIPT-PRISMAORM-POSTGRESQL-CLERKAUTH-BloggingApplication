@@ -13,9 +13,16 @@ import { Button } from "../ui/button";
 import "react-quill-new/dist/quill.snow.css";
 import { createArticle } from "@/actions/create-article";
 
+type Props = {};
 
+const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
+const CreateArticlesPage = (props: Props) => {
+  
 
+  
 
+  
+};
 
 
