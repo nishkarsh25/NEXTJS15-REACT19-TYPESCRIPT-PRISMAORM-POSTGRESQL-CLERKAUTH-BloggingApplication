@@ -121,4 +121,4 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
   );
 };
 
-
+export default EditArticlePage;
