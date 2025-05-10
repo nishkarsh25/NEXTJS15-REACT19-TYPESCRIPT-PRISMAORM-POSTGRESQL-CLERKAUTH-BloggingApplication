@@ -9,7 +9,18 @@ type ArticleDetailPageProps = {
 const page: React.FC<ArticleDetailPageProps> = async ({ params }) => {
   const id = (await params).id;
 
-  
+  const article = await prisma.articles.findUnique({
+    where: { id },
+    include: {
+      author: {
+        select: {
+          name: true,
+          email: true,
+          imageUrl: true,
+        },
+      },
+    },
+  });
 
   
 
