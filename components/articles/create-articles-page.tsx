@@ -13,11 +13,9 @@ import { Button } from "../ui/button";
 import "react-quill-new/dist/quill.snow.css";
 import { createArticle } from "@/actions/create-article";
 
-type Props = {};
-
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
-const CreateArticlesPage = (props: Props) => {
+const CreateArticlesPage = () => {
   const [content, setContent] = useState("");
   const [formState, action, isPending] = useActionState(createArticle, {
     errors: {},
@@ -77,7 +75,12 @@ const CreateArticlesPage = (props: Props) => {
 
             <div className="space-y-2">
               <Label htmlFor="featuredImage">Featured Image</Label>
-              <Input type="file" name="featuredImage" id="featuredImage" accept="image/*" />
+              <Input
+                type="file"
+                name="featuredImage"
+                id="featuredImage"
+                accept="image/*"
+              />
             </div>
 
             <div className="space-y-2">
@@ -91,7 +94,9 @@ const CreateArticlesPage = (props: Props) => {
             </div>
 
             <div className="flex justify-end gap-4 ">
-              <Button type="button" variant={"outline"}>Cancel</Button>
+              <Button type="button" variant={"outline"}>
+                Cancel
+              </Button>
               <Button type="submit" disabled={isPending}>
                 {isPending ? "Loading...." : "Publish Articles"}
               </Button>

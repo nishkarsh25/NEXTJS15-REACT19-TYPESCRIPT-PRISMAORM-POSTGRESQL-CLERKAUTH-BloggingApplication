@@ -7,9 +7,7 @@ import Link from "next/link";
 import React, { Suspense } from "react";
 import { AllArticlesPageSkeleton } from "../articles/page";
 
-type Props = {};
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <div>
       <Navbar />

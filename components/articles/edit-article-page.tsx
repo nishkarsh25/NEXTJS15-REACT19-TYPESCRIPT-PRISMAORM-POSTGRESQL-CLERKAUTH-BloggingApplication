@@ -11,12 +11,8 @@ import { Label } from "../ui/label";
 import dynamic from "next/dynamic";
 import { Button } from "../ui/button";
 import "react-quill-new/dist/quill.snow.css";
-import { createArticle } from "@/actions/create-article";
 import { Articles } from "@prisma/client";
-import Image from "next/image";
 import { editArticle } from "@/actions/edit-article";
-
-type Props = {};
 
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
@@ -26,9 +22,12 @@ type EditArticleProps = {
 
 const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
   const [content, setContent] = useState(article.content);
-  const [formState, action, isPending] = useActionState(editArticle.bind(null,article.id), {
-    errors: {},
-  });
+  const [formState, action, isPending] = useActionState(
+    editArticle.bind(null, article.id),
+    {
+      errors: {},
+    }
+  );
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -86,7 +85,12 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
 
             <div className="space-y-2">
               <Label htmlFor="featuredImage">Featured Image</Label>
-              <Input type="file" name="featuredImage" id="featuredImage" accept="image/*" />
+              <Input
+                type="file"
+                name="featuredImage"
+                id="featuredImage"
+                accept="image/*"
+              />
               <div className="mb-4 ">
                 {article.featuredImage && (
                   <img

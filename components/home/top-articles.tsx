@@ -6,9 +6,7 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { prisma } from "@/lib/prisma";
 
-type Props = {};
-
-const TopArticles = async (props: Props) => {
+const TopArticles = async () => {
   const articles = await prisma.articles.findMany({
     orderBy: {
       createdAt: "desc",
@@ -35,7 +33,6 @@ const TopArticles = async (props: Props) => {
             "border border-gray-200/50 dark:border-white/10",
             "bg-white/50 dark:bg-gray-900/50 backdrop-blur-lg"
           )}
-
           key={article.id}
         >
           <div className="p-6">

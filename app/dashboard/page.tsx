@@ -1,14 +1,12 @@
-import BlogDashBoard from '@/components/dashboard/blog-dashboard'
-import React from 'react'
+import BlogDashBoard from "@/components/dashboard/blog-dashboard";
+import React from "react";
 
-type Props = {}
-
-const DashBoard = (props: Props) => {
+const DashBoard = () => {
   return (
     <div>
-        <BlogDashBoard/>
+      <BlogDashBoard />
     </div>
-  )
-}
+  );
+};
 
-export default DashBoard
+export default DashBoard;
