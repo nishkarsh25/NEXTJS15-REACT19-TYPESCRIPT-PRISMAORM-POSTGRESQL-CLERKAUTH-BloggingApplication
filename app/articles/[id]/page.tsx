@@ -33,4 +33,4 @@ const page: React.FC<ArticleDetailPageProps> = async ({ params }) => {
   );
 };
 
-
+export default page;
