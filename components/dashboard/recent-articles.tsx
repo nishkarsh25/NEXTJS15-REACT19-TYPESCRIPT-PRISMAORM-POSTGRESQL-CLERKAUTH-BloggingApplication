@@ -104,7 +104,7 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ articleId }) => {
     <form
       action={() => {
         startTransition(async () => {
-          
+          await deleteArticle(articleId);
         });
       }}
     >
