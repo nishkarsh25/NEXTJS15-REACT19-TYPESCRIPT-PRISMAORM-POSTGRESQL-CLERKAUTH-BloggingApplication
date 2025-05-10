@@ -28,6 +28,11 @@ const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
           {formState.errors.body && (
             <p className="text-red-600 text-sm">{formState.errors.body}</p>
           )}
+          <div className="mt-4 flex justify-end">
+            <Button type="submit" disabled={isPending}>
+              {isPending ? "Loading" : "Post Comment"}
+            </Button>
+          </div>
           
         </div>
       </div>
