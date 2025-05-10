@@ -44,4 +44,4 @@ const CommentInput: React.FC<CommentInputProps> = ({ articleId }) => {
   );
 };
 
-
+export default CommentInput;
