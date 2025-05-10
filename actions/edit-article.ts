@@ -55,9 +55,17 @@ export const editArticle = async (
     };
   }
 
-  
+  const existingArticle = await prisma.articles.findUnique({
+    where: { id: articleId },
+  });
 
-  
+  if (!existingArticle) {
+    return {
+      errors: {
+        formErrors: ["Article not found"],
+      },
+    };
+  }
 
   
 
