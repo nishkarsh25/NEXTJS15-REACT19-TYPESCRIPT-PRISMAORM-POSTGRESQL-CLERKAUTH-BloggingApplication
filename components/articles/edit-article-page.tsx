@@ -13,6 +13,7 @@ import { Button } from "../ui/button";
 import "react-quill-new/dist/quill.snow.css";
 import { Articles } from "@prisma/client";
 import { editArticle } from "@/actions/edit-article";
+import Image from "next/image";
 
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
@@ -93,10 +94,12 @@ const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
               />
               <div className="mb-4 ">
                 {article.featuredImage && (
-                  <img
+                  <Image
                     src={article.featuredImage}
-                    alt="featured-image"
-                    className="w-48 h-32 object-cover rounded-md"
+                    alt="Current featured"
+                    width={192}
+                    height={128}  
+                    className="object-cover rounded-md"
                   />
                 )}
               </div>
