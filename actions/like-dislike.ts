@@ -11,9 +11,13 @@ export const likeDislikeToggle = async (articleId: string) => {
     throw new Error("You must logged in to like an article");
   }
 
-  
+  const user = await prisma.user.findUnique({
+    where: { clerkUserId: userId },
+  });
 
- 
+  if (!user) {
+    throw new Error("User does not exist in the database");
+  }
 
   
 
