@@ -16,6 +16,12 @@ type CommentListProps = {
   }>[];
 };
 
-
+const CommentList: React.FC<CommentListProps> = ({ comments }) => {
+  return (
+    <div className="space-y-8 ">
+      
+    </div>
+  );
+};
 
 
