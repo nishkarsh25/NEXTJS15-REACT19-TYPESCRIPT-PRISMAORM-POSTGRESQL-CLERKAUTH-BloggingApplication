@@ -39,7 +39,9 @@ const LeftSidebar = () => {
       </Sheet>
 
 
-      
+      <div className="hidden md:block h-screen w-[250px] border-r bg-background ">
+        <DashboardSidebar/>
+      </div>
     </div>
   );
 };
