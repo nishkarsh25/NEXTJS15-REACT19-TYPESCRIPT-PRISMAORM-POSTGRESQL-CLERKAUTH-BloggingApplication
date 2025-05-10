@@ -16,12 +16,23 @@ import { Articles } from "@prisma/client";
 import Image from "next/image";
 import { editArticle } from "@/actions/edit-article";
 
+type Props = {};
 
+const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
+type EditArticleProps = {
+  article: Articles;
+};
 
+const EditArticlePage: React.FC<EditArticleProps> = ({ article }) => {
+  const [content, setContent] = useState(article.content);
+  const [formState, action, isPending] = useActionState(editArticle.bind(null,article.id), {
+    errors: {},
+  });
 
+  
 
-
-
+ 
+};
 
 
