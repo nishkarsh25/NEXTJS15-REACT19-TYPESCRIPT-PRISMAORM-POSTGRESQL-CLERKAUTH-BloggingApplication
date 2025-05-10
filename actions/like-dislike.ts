@@ -26,6 +26,22 @@ export const likeDislikeToggle = async (articleId: string) => {
     },
   });
 
-  
+  if (exisitingLike) {
+    //dislike
+    await prisma.like.delete({
+      where: {
+        id: exisitingLike.id,
+      },
+    });
+  } else {
+    //like
+    await prisma.like.create({
+      data: {
+        articleId,
+        userId: user.id,
+      },
+    });
+  }
+
   
 };
