@@ -100,5 +100,17 @@ type DeleteButtonProps = {
 
 const DeleteButton: React.FC<DeleteButtonProps> = ({ articleId }) => {
   const [isPending, startTransition] = useTransition();
-  
+  return (
+    <form
+      action={() => {
+        startTransition(async () => {
+          
+        });
+      }}
+    >
+      <Button disabled={isPending} variant={"ghost"} size={"sm"} type="submit">
+        {isPending ? "Loading" : "Delete"}
+      </Button>
+    </form>
+  );
 };
