@@ -75,4 +75,4 @@ const TopArticles = async (props: Props) => {
   );
 };
 
-
+export default TopArticles;
