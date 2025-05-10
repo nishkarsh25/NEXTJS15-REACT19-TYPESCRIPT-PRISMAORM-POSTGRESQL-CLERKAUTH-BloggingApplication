@@ -133,7 +133,12 @@ const BlogFooter = () => {
           </div>
         </div>
 
-        
+        {/* Copyright */}
+        <div className="mt-12 border-t pt-8 text-center">
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} ByteCode. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
