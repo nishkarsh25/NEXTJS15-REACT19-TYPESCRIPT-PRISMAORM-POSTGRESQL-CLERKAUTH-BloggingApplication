@@ -24,8 +24,61 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
 
   const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
 
-  
-};
+  return (
+    <div className="min-h-screen bg-background">
+      <main className="container mx-auto px-4 py-12 sm:px-6 lg:text-5xl">
+        {/* Page Header */}
+        <div className="mb-12 space-y-6 text-center">
+          <h1 className="text-4xl font-bold sm:text-5xl">All Articles</h1>
 
+          {/* Search Bar */}
+          <ArticleSearchInput />
+        </div>
+
+        {/* All Article card */}
+        <Suspense fallback={<AllArticlesPageSkeleton />}>
+          <AllArticlePage articles={articles} />
+        </Suspense>
+
+        {/* pagination */}
+        <div className="mt-12 flex justify-center gap-2">
+          <Link href={`?search=${searchText}&page=${currentPage - 1}`} passHref>
+            <Button disabled={currentPage === 1} variant={"ghost"} size={"sm"}>
+              {" "}
+              ← Prev
+            </Button>
+          </Link>
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <Link
+              key={index}
+              href={`?search=${searchText}&page=${index + 1}`}
+              passHref
+            >
+              <Button
+                variant={`${
+                  currentPage === index + 1 ? "destructive" : "ghost"
+                }`}
+                size={"sm"}
+              >
+                {index + 1}
+              </Button>
+            </Link>
+          ))}
+
+          <Link href={`?search=${searchText}&page=${currentPage + 1}`} passHref>
+            <Button
+              disabled={currentPage === totalPages}
+              variant={"ghost"}
+              size={"sm"}
+            >
+              {" "}
+              Next →
+            </Button>
+          </Link>
+        </div>
+      </main>
+    </div>
+  );
+};
 
 
