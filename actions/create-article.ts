@@ -28,8 +28,11 @@ type CreateArticlesFormState = {
   };
 };
 
-
-
+export const createArticle = async (
+  prevState: CreateArticlesFormState,
+  formData: FormData
+): Promise<CreateArticlesFormState> => {
+  
   
 
   
