@@ -12,7 +12,7 @@ const page: React.FC<EditArticleParams> = async ({ params }) => {
     where: { id },
   });
 
-  
+  if (!article) return <h1>Article not found for this {id}</h1>;
   
 };
 
