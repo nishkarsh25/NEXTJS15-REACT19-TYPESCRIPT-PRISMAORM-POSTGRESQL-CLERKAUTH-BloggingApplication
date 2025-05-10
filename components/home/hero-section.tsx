@@ -44,7 +44,20 @@ const HeroSection = (props: Props) => {
             </div>
           </div>
 
-          
+          {/* Image Frame */}
+
+          <div className="mt-12 flex-1 md:mt-0">
+            <div
+              className={cn(
+                "relative mx-auto w-64 h-64 rounded-2xl overflow-hidden",
+                "bg-gradient-to-br from-white/5 to-transparent",
+                "border-border-primary/20 backdrop-blur-lg",
+                "shadow-2xl shadow-ind-500/10 "
+              )}
+            >
+              <Image src="" alt="hero-image" fill className="object-cover" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
