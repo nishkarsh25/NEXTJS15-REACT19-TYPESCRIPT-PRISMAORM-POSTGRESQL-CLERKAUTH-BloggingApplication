@@ -4,7 +4,11 @@ import { Mail } from "lucide-react";
 import { Linkedin, Github, Twitter } from "lucide-react";
 
 const BlogFooter = () => {
-  
+  return (
+    <footer className="border-t bg-background">
+      
+    </footer>
+  );
 };
 
 
