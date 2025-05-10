@@ -26,7 +26,11 @@ const page: React.FC<ArticleDetailPageProps> = async ({ params }) => {
     return <h1>Article not found</h1>;
   }
 
-  
+  return (
+    <div>
+      <ArticleDetailPage article={article} />
+    </div>
+  );
 };
 
 
