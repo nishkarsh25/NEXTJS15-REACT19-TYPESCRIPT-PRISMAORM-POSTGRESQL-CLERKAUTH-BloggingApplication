@@ -92,7 +92,7 @@ const RecentArticles: React.FC<RecenetArticlesProps> = ({ articles }) => {
   );
 };
 
-
+export default RecentArticles;
 
 type DeleteButtonProps = {
   articleId: string;
