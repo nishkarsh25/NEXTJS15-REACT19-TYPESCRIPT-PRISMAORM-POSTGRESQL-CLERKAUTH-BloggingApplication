@@ -57,8 +57,6 @@ With modular components, server-side rendering, and a responsive design, this pr
 
 - You can try out the live demo of the blogging app [here](https://nextjs-15-react-19-typescript-prismaorm-postgresql-uv2fpcb5e.vercel.app/).
 
-## Folder Structure
-
 ## 📁 Folder Structure
 
 ```
